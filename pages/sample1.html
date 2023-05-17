@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/Register.css" />
+  <title>Register page</title>
+</head>
+
+<body>
+  <header><img src="../media/FMH.png" width="200px" /></header>
+  <main>
+    <h2>Register Page</h2>
+
+    <div class="register">
+      <form action="/processreg" method="post">
+        <label><b>Username:</b><br /> </label>
+        <input type="text" name="username" id="username" placeholder="Username" required /><br /><br />
+        <label><b>Email:</b><br /> </label>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" required /><br /><br />
+        <label><b>Password:</b><br /> </label>
+        <input type="password" name="password" id="password" placeholder="***********" required /><br /><br />
+        <label><b>Repeat Password:</b><br /> </label>
+        <input type="Password" name="Pass" id="RepPass" placeholder="***********" required /><br />
+        <p id="result"></p>
+        <label><b>Type of User:</b><br /></label>
+        <select name="userType" id="userType">
+          <option selected value="placeholder">select a type.....</option>
+          <option value="costumer">Customer</option>
+          <option value="employee">Employee</option>
+          <option value="worker">Worker</option>
+        </select><br /><br />
+        <button type="submit" id="Confirm" onclick="window.location.href='';">
+          Confirm
+        </button>
+      </form>
+    </div>
+    <br /><br />
+
+    <script>
+      let pass1 = document.querySelector("#password");
+      let pass2 = document.querySelector("#repassword");
+      function checkpassword() {
+        result.innerText =
+          pass1.value == pass2.value ? "matching" : "not matching";
+      }
+      pass1.addEventListener("keyup", () => {
+        if (pass1.length != 0) checkpassword();
+      });
+      pass2.addEventListener("keyup", checkpassword);
+    </script>
+  </main>
+  <footer class="footer"></footer>
+</body>
+
+</html>

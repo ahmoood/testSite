@@ -1,0 +1,80 @@
+header {
+  padding: 15px;
+  background-image: url(../media/woodplank.png);
+  background-color: green;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+  font-family: "Arial";
+}
+
+footer {
+  padding: 15px;
+  background-image: url(../media/Metal-Sheet.png);
+  background-color: burlywood;
+  color: red;
+  padding: 50px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.login {
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 450px;
+  padding: 80px;
+  background: #23463f;
+  border-radius: 15px;
+}
+h2 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+label {
+  color: #08ffd1;
+  font-size: 17px;
+}
+#logusername {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+#logpassword {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+#log {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: blue;
+}
+span {
+  color: white;
+  font-size: 17px;
+}
+a {
+  float: right;
+  background-color: grey;
+}

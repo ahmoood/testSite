@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/LogIn.css" />
+  </head>
+  <body>
+    <header><img src="../media/FMH.png" width="200px" /></header>
+    <main>
+      <h2>Login Page</h2>
+
+      <div class="login">
+        <form id="login" method="post" action="/processlogin">
+          <label><b>User Name </b> </label>
+          <input type="email" name="logusername" id="logusername" placeholder="Username" />
+          <br /><br />
+          <label><b>Password </b> </label>
+          <input type="Password" name="logpassword" id="logpassword" placeholder="Password" />
+          <br /><br />
+          <button type="submit" id="log">
+            Log in
+          </button>
+          <br /><br />
+          <input type="checkbox" id="check" />
+          <span>Remember me</span>
+          <br /><br />
+        </form>
+      </div>
+    </main>
+    <br /><br />
+    <footer class="footer"></footer>
+  </body>
+</html>

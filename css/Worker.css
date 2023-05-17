@@ -1,0 +1,42 @@
+header {
+  padding: 15px;
+  background-image: url(../media/woodplank.png);
+  background-color: green;
+  color: white;
+}
+
+body {
+  background-color: lightgray;
+  font-family: "Arial";
+}
+
+footer {
+  padding: 15px;
+  background-image: url(../media/Metal-Sheet.png);
+  background-color: burlywood;
+  color: red;
+  padding: 50px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+.divcenter {
+  text-align: center;
+}
