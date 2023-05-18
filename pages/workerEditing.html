@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/Worker Editing.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <h1>add your service and hit puhlish for the customer to see it</h1>
-    <form action="/workerEdit" method="post">
-    name of service: <input type="text" name="serviceName" id="serviceName" required><br>
-    add your phone number: <input type="text" name="phoneNumber" id="phoneNumber" required> <br>
-    add description: <br> <textarea name="description" id="" cols="30" rows="10" style="resize: none;" required></textarea><br>
-    <button type="submit">publish!</button>
-</form>
-</body>
+  <body>
+    <header class="header">
+      <img
+        src="/media/FMH.png"
+        width="200px"
+        alt="an image of the logo"
+        style="padding-left: 30px"
+      />
+    </header>
+    <br /><br /><br /><br /><br />
 
+    <main>
+      <br /><br /><br /><br /><br />
+      <div class="login">
+        <form id="login" method="post" action="/workerEdit">
+          <label><b>Name of Service: </b> </label>
+          <input type="text" name="serviceName" id="Uname" placeholder="service name" />
+          <br /><br />
+          <label><b>Add Your Phone Number: </b> </label>
+          <input type="text" name="phoneNumber" id="Pass" placeholder="phoneNumber" />
+          <br /><br />
+          <label><b>Add a Description:</b></label> <br />
+          <textarea
+            name="description"
+            id="Desc"
+            cols="30"
+            rows="10"
+            style="resize: none"
+            required
+          ></textarea>
+          <br /><br />
+          <button type="submit" id="log" onclick="window.location.href='';">
+            Publish!
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>

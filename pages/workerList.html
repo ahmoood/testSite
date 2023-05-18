@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/Worker List.css" />
 </head>
+
 <body>
-    <div id="product-container"></div>
+  <header class="header">
+    <img src="/media/FMH.png" width="200px" alt="an image of the logo" style="padding-left: 30px" />
+  </header>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+  <div id="product-container" class="product-container"></div>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <footer class="footer"></footer>
 </body>
 <script>
-    const container=document.getElementById("product-container")
-    async function test() {
-        let response=await fetch("http://localhost:3000/workerListFetch",{method:"GET"})
-        workerdata=await response.json()
-        workerdata.forEach(data => {
-            const dataCard=document.createElement("div");
-            dataCard.classList.add("data-card")
-            
-            const email=document.createElement("p")
-            email.textContent=data.workerEmail
+  const container = document.getElementById("product-container");
+  async function test() {
+    let response = await fetch("http://localhost:3000/workerListFetch", { method: "GET" })
+    workerData = await response.json()
+    workerData.forEach((data) => {
+      const dataCard = document.createElement("div");
+      dataCard.classList.add("card");
+      dataCard.classList.add("data-card");
 
-            const service=document.createElement("h3")
-            service.textContent=data.serviceName
+      const email = document.createElement("p");
+      email.classList.add("email");
+      email.textContent = data.workerEmail;
 
-            const phoneNumber=document.createElement("p")
-            phoneNumber.textContent=data.phoneNumber
+      const service = document.createElement("h3");
+      service.classList.add("service");
+      service.textContent = data.serviceName;
 
-            const description=document.createElement("p")
-            description.textContent=data.description
+      const phoneNumber = document.createElement("p");
+      phoneNumber.classList.add("phoneNumber");
+      phoneNumber.textContent = data.phoneNumber;
 
-            dataCard.append(service)
-            dataCard.append(email)
-            dataCard.append(phoneNumber)
-            dataCard.append(description)
-            container.appendChild(dataCard)
-        });
-    }
-    test()
+      const description = document.createElement("p");
+      description.classList.add("description");
+      description.textContent = data.description;
+
+      dataCard.append(service);
+      dataCard.append(email);
+      dataCard.append(phoneNumber);
+      dataCard.append(description);
+      container.appendChild(dataCard);
+    });
+  }
+  test();
 </script>
+
 </html>

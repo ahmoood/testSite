@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 15px;
+  background-image: url(../media/woodplank.png);
+  background-color: green;
+  color: white;
+}
+
+body {
+  background-color: lightgray;
+  font-family: "Arial";
+}
+
+footer {
+  padding: 15px;
+  background-image: url(../media/Metal-Sheet.png);
+  background-color: burlywood;
+  color: red;
+  padding: 50px;
+}
+
+.footer {
+  position: absolute;
+
+  width: 94.71%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+.card {
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 450px;
+  padding: 80px;
+  background: #23463f;
+  border-radius: 50px;
+  border: solid 20px;
+  border-color: lightgray;
+  font-weight: bold;
+}
+
+.product-container {
+  border-color: black;
+  border: transparent;
+  margin: 10px;
+}
+
+.service {
+  border-color: black;
+  color: #08ffd1;
+  border: transparent;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+.email {
+  border-color: black;
+  color: white;
+  border: transparent;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.phoneNumber {
+  border-color: black;
+  color: white;
+  border: transparent;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.description {
+  border-color: black;
+  color: white;
+  border: transparent;
+  font-size: 20px;
+}
