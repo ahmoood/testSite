@@ -77,7 +77,7 @@ app.get("/workerList", async (request, response) => {
     response.sendFile(__dirname + "/pages/workerList.html")
 })
 app.get("/workerListFetch", async (request,response) => {
-    const query = "SELECT * FROM SERVICES;"
+    const query = "SELECT * FROM services;"
     const rows = await db.promise().query(query)
     console.log(rows[0])
     response.json(rows[0])
