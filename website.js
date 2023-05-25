@@ -30,7 +30,7 @@ app.post("/processreg", bodyParser.urlencoded({ extended: false }), async (req, 
     else {
         //insert register creditials into the database
         const id = new Date().getTime();
-        db.query(`INSERT INTO USERS VALUES("${id}","${email}","${password}","${userType}","${username}")`, (err, res) => {
+        db.query(`INSERT INTO users VALUES("${id}","${email}","${password}","${userType}","${username}")`, (err, res) => {
             if (err) { console.log("AN EXCEPTION HAPPENED!!!!" + err); return; }
         })
         res.sendFile(__dirname + "/pages/redirect.html")
@@ -69,7 +69,7 @@ app.route("/workerEdit").get((request, response) => {
     response.sendFile(__dirname + "/pages/workerEditing.html")
 }).post(bodyParser.urlencoded({ extended: false }), (request, reponse,) => {
     const { serviceName, phoneNumber, description } = request.body;
-    const query = `INSERT INTO SERVICES VALUES("${email}","${serviceName}","${phoneNumber}","${description}")`;
+    const query = `INSERT INTO services VALUES("${email}","${serviceName}","${phoneNumber}","${description}")`;
     db.query(query, (err) => { if (err) console.log(err); else console.log("service has been published!") })
     reponse.sendFile(__dirname + "/pages/redirectWorker.html")
 })
